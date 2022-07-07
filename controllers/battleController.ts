@@ -12,7 +12,7 @@ const battleController = async (req: Request, res: Response) => {
             await setUser(firstUser);
         }else if(users.getSecondUser.rowCount === 0){
             await setUser(secondUser);           
-        }else{
+        }else if((users.getSecondUser.rowCount === 0) && (users.getFirstUser.rowCount === 0)){
             await setUser(firstUser);           
             await setUser(secondUser);                       
         }
