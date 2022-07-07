@@ -1,4 +1,4 @@
 import 'dotenv/config';
 
-const port: number = Number(process.env.PORT) || 5000;
-export default port;
+export const port: number = Number(process.env.PORT) || 5000;
+export const connection = process.env.DATABASE_URL; 
